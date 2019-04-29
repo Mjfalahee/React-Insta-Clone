@@ -1,0 +1,48 @@
+$font1: 'Oleo Script', cursive;
+$font2: 'Roboto', sans-serif;
+
+.searchbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    //brand and title
+    .left-group {
+        display: flex;
+        padding: 0;
+        margin-right: auto;
+
+        .brandimg {
+            padding-right: 10px;
+        }
+        h3 {
+            border-left: 1px solid grey;
+            margin: 0;
+            font-family: $font1;
+            font-weight: 200;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    // search input
+    form {
+        margin-left: auto;
+        .searchinput {
+            text-align: center;
+            width: 150px;
+            height: 20px;
+            opacity: 0.4;
+            border: 1px solid grey;
+            border-radius: 3px;
+            background-color: lightgrey;
+            color: grey;
+        }
+    }
+    //icons
+    .right-group {
+        margin: 0;
+        padding: 0;
+        margin-left: auto;
+    }
+}
