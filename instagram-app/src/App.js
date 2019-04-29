@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+import PropTypes from 'prop-types';
+import PostContainer from './components/PostContainer/PostContainer';
 import './App.css';
 import dummyData from './dummy-data';
 
