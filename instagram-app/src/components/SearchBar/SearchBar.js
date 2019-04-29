@@ -9,7 +9,7 @@ function SearchBar() {
                 <img className="brandimg" src="" alt="Insta" />
                 <h3>Instagram</h3>
             </div>
-            <form>
+            <form className="searchform">
                 <input className="searchinput"
                 type="text"
                 placeholder="Search" />
