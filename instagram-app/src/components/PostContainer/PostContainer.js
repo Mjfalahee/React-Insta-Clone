@@ -5,7 +5,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.scss';
 
 function PostContainer(props) {
-    console.log(props);
+    //console.log(props);
     return( 
         <div className="post-container">
         <PostContent username={props.data.username} 
@@ -13,7 +13,7 @@ function PostContainer(props) {
         image={props.data.imageUrl}
         likes={props.data.likes}
         />
-        <CommentSection comments= {props.data.comments} />
+        <CommentSection comments= {props.data.comments} postid= {props.data.imageUrl}/>
         </div>
     );
 }

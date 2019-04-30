@@ -1,24 +1,36 @@
 import React from 'react';
+import Likes from './Likes';
 import PropTypes from 'prop-types';
 import './PostContent.scss';
 
+class PostContent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            content : props,
+            likesonState: props.likes,
+        }
+    }
 
-function PostContent(props) {
-    //console.log(props);
-    return (
-        <div>
-        <header className="posthead">
-        <img className="postthumbnail" src= {props.thumbnail} alt=""/>
-        <h5 className="postname"> {props.username} </h5>
-        </header>
-        <img className="postimage" src= {props.image} alt=""/>
-        <div className="icons">
-        <img src="" alt="heart" />
-        <img src="" alt="quote" />
-        </div>
-        <p className="likes"> {props.likes} likes </p>
-        </div>
-    )
+    LikesHandler = () => {
+        console.log('clicked');
+        let newlikes = this.state.likesonState;
+        newlikes++;
+        this.setState({likesonState: newlikes});
+    } 
+
+    render() {
+        //console.log(props);
+        return (
+            <div>
+            <header className="posthead">
+            <img className="postthumbnail" src= {this.state.content.thumbnail} alt=""/>
+            <h5 className="postname"> {this.state.content.username} </h5>
+            </header>
+            <img className="postimage" src= {this.state.content.image} alt=""/>
+            <Likes likes={this.state.likesonState} handleClick={this.LikesHandler}/>
+            </div>
+        )
+    }
 }
-
 export default PostContent;
