@@ -2,15 +2,17 @@ import React from 'react';
 import './SearchBar.scss';
 
 
-function SearchBar() {
+function SearchBar(props) {
     return (
         <div className="searchbar">
             <div className="left-group">
                 <img className="brandimg" src="https://img.icons8.com/ios/50/000000/instagram-new.png" alt="Insta" />
                 <h3>Instagram</h3>
             </div>
-            <form className="searchform">
+            <form className="searchform"
+            onSubmit={props.searchfilterSubmit}>
                 <input className="searchinput"
+                onChange={props.searchHandler}
                 type="text"
                 placeholder="Search" />
                 {/* https://img.icons8.com/ios/50/000000/search.png */}

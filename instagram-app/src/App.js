@@ -21,15 +21,23 @@ class App extends React.Component {
   }
 
   searchFilter = (e) => {
+    e.preventDefault();
     console.log('filtered');
+    let searcharray = this.state.dataset.filter(e => e.username === this.state.searchterm)
+    console.log(searcharray);
+    this.setState({dataset: searcharray});
   }
 
-  searchHandler
+  searchHandler = element => {
+    console.log(this.state.searchterm)
+    this.setState({searchterm: element.target.value});
+   }
   render() {
+    console.log(this.state.dataset);
     //console.log('render is running')
     return (
     <div className="App">
-      <SearchBar />
+      <SearchBar searchHandler={this.searchHandler} searchfilterSubmit={this.searchFilter}/>
       <div className="posts">
         {this.state.dataset.map(data => <PostContainer data={data} key={data.timestamp}/>)}
       </div>
