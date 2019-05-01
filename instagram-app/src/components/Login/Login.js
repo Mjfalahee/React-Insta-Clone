@@ -40,9 +40,8 @@ class Login extends React.Component {
 
     render() {
     return (
-            <div>
+            <div className='login-page'>
                 <h3> Please log in to access the site!</h3>
-
                 <form onSubmit={this.loginHandler}>
                     <input className="user" 
                     type="text" 
@@ -50,6 +49,8 @@ class Login extends React.Component {
                     name="username"
                     value={this.state.username}
                     onChange={this.inputHandler}/>
+                </form>
+                <form onSubmit={this.loginHandler}>
                     <input className="pass" 
                     type="text" 
                     placeholder="Password"
