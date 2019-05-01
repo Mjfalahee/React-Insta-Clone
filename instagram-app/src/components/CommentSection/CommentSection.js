@@ -22,7 +22,7 @@ class CommentSection extends React.Component {
 
     addNewComment = event => {
         event.preventDefault(); //prevents browser from refreshing
-        let newcomment = {text: this.state.comment, username: 'Me'};
+        let newcomment = {text: this.state.comment, username: localStorage.getItem('username')};
         let commentscurrently = this.state.commentState;
         console.log(commentscurrently);
         commentscurrently.push(newcomment);
