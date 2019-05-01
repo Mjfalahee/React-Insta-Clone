@@ -1,14 +1,12 @@
 import React from 'react';
 
 
-const withAuthenticate = FirstComp => SecondComp =>
+const withAuthenticate = PostsPage => Login =>
 class extends React.Component {
     constructor() {
         super();
         this.state = {
             loggedIn : false,
-            username: '',
-            password: ''
         }
     }
 
@@ -21,9 +19,9 @@ class extends React.Component {
     }
     render() {
         if (this.state.loggedIn)
-            return <FirstComp />;
+            return <PostsPage />;
         else {
-            return <SecondComp />
+            return <Login />
         }
     }
 }
