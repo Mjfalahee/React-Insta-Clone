@@ -22,9 +22,9 @@ class App extends React.Component {
 
   searchFilter = (e) => {
     e.preventDefault();
-    console.log('filtered');
+    //console.log('filtered');
     let searcharray = this.state.dataset.filter(e => e.username === this.state.searchterm)
-    console.log(searcharray);
+    //console.log(searcharray);
     this.setState({dataset: searcharray});
   }
 

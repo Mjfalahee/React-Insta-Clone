@@ -12,7 +12,6 @@ header {
         height: 5%;
         border-radius: 20px;
     }
-    
     h5 {
         padding-left: 10px;
         font-size: 14.5px;
@@ -25,8 +24,24 @@ header {
 
 .icons {
     margin-top: 10px;
-    img {
-        padding-left: 10px;
+    button {
+        margin-left: 10px;
+        margin-right: 20px;
+        padding: 0;
+        width: 30px;
+        background: none;
+        border: none;
+    }
+
+    .heart {
+        width: 35px;
+        height: 100%;
+    }
+
+    .quote {
+        width: 30px;
+        height: 100%;
+        padding-right: 10px;
     }
 }
 

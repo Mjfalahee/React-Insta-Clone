@@ -11,11 +11,16 @@ function SearchBar(props) {
             </div>
             <form className="searchform"
             onSubmit={props.searchfilterSubmit}>
+            <view> <img className="searchicon"
+                src='https://img.icons8.com/ios/50/000000/search.png'
+                alt=''/>
                 <input className="searchinput"
                 onChange={props.searchHandler}
                 type="text"
-                placeholder="Search" />
-                {/* https://img.icons8.com/ios/50/000000/search.png */}
+                placeholder="Search" 
+                //'https://img.icons8.com/ios/50/000000/search.png'
+                />
+                </view>
             </form>
             <div className="right-group">
                 <img className="icon"
