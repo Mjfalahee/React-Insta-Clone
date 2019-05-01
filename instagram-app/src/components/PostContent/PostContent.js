@@ -1,6 +1,5 @@
 import React from 'react';
 import Likes from './Likes';
-import PropTypes from 'prop-types';
 import './PostContent.scss';
 
 class PostContent extends React.Component {

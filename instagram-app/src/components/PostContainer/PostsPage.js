@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
 import '../../App.scss';
