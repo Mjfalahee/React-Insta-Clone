@@ -1,14 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import './CommentSection.scss';
+import styled, { css } from 'styled-components';
+//import './CommentSection.scss';
+
+const Div = styled.div`
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+`
+
+const Form = styled.form`
+    display: flex;
+    justify-content: flex-start;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 100%;
+`
+
+const Input = styled.input`
+    border: none;
+    border-top: 1px solid lightgrey;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 97%;
+    height: 40%;
+`
 
 
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
-        //console.log('CommentSection constructor');
-        //console.log(props);
         this.state={
             commentState: [],
             comment: ''
@@ -36,21 +64,19 @@ class CommentSection extends React.Component {
 
 
     render() {
-        //console.log(this.state.commentState);
-        //console.log(this.state.comment);
         return (
-            <div className = "comment-section">
+            <Div>
             {this.state.commentState.map(comment => <Comment comment={comment} key={comment.text}/>)}
-            <form className="commentform" onSubmit= {this.addNewComment}>
-                <input className="newcomment" 
+            <Form onSubmit= {this.addNewComment}>
+                <Input
                 type="text" 
                 placeholder="Add a comment..."
                 name="comment"
                 value= {this.state.comment}
                 onChange = {this.commentHandler}
                 />
-            </form>
-            </div>
+            </Form>
+            </Div>
         );
       }
     }

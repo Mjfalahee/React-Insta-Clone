@@ -1,15 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CommentSection.scss';
+import styled, { css } from 'styled-components';
+import H5 from '../StyledReusable';
+//import './CommentSection.scss';
 
+
+const Div = styled.div`
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 30px;
+    padding-left: 10px;
+    margin: 0;
+`
+
+const P = styled.p`
+    font-size: 14px;
+`
 
 function Comment(props) {
     //console.log(props);
     return (
-        <div className="comment">
-        <h6 className="comment-username">{props.comment.username}</h6>
-        <p className="comment-text">{props.comment.text}</p>
-        </div>
+        <Div>
+        <H5 type="comment">{props.comment.username}</H5>
+        <P>{props.comment.text}</P>
+        </Div>
     );
 }
 
