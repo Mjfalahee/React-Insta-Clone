@@ -4,7 +4,9 @@ import Likes from './Likes';
 import styled, { css } from 'styled-components';
 import H5 from '../StyledReusable';
 
-
+const Div = styled.div`
+    margin-bottom: 0;
+`
 const Header = styled.header`
     display: flex;
     justify-content: flex-start;
@@ -18,7 +20,8 @@ const Img = styled.img`
         height: 5%;
         border-radius: 20px;` : null)}
     ${props => (props.type === 'postimage' ? `
-        width: 100%;` : null)}
+        width: 100%;
+        margin-bottom: 0;` : null)}
 `
 
 class PostContent extends React.Component {
@@ -40,14 +43,14 @@ class PostContent extends React.Component {
     render() {
         //console.log(props);
         return (
-            <div>
+            <Div>
             <Header className="posthead">
             <Img type="thumbnail" src= {this.state.content.thumbnail} alt=""/>
             <H5> {this.state.content.username} </H5>
             </Header>
             <Img type="postimage" src= {this.state.content.image} alt=""/>
             <Likes likes={this.state.likesonState} handleClick={this.LikesHandler}/>
-            </div>
+            </Div>
         )
     }
 }
