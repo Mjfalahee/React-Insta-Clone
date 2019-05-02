@@ -35,13 +35,21 @@ class PostsPage extends React.Component {
           this.setState({searchterm: element.target.value});
          }
 
+                
+        logoutHandler() { 
+          localStorage.removeItem('username');
+          window.location.reload();
+        }
+
 
         render() {
         console.log(this.state.dataset);
         //console.log('render is running')
         return (
         <div className="App">
-            <SearchBar searchHandler={this.searchHandler} searchfilterSubmit={this.searchFilter}/>
+            <SearchBar searchHandler={this.searchHandler}
+             searchfilterSubmit={this.searchFilter}
+             logoutHandler={this.logoutHandler}/>
             <div className="posts">
             {this.state.dataset.map(data => <PostContainer data={data} key={data.timestamp}/>)}
             </div>
