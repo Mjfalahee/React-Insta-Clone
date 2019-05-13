@@ -1,0 +1,47 @@
+$font1: 'Oleo Script', cursive;
+$font2: 'Roboto', sans-serif;
+
+.login-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -300px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 500px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-family: $font1;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.user {
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.pass {
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: darkgrey;
+    margin-top: 25px;
+    height: 30px;
+    width: 150px;
+}
